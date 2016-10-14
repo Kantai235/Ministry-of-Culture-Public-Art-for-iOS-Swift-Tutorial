@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A749924B1DB0AF1A00F54E73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749924A1DB0AF1A00F54E73 /* AppDelegate.swift */; };
+		A749924D1DB0AF1A00F54E73 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749924C1DB0AF1A00F54E73 /* MasterViewController.swift */; };
+		A749924F1DB0AF1A00F54E73 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749924E1DB0AF1A00F54E73 /* DetailViewController.swift */; };
+		A74992521DB0AF1A00F54E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74992501DB0AF1A00F54E73 /* Main.storyboard */; };
+		A74992541DB0AF1A00F54E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74992531DB0AF1A00F54E73 /* Assets.xcassets */; };
+		A74992571DB0AF1B00F54E73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74992551DB0AF1A00F54E73 /* LaunchScreen.storyboard */; };
+		A74992621DB0AF1B00F54E73 /* Ministry_of_Culture_Public_ArtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74992611DB0AF1B00F54E73 /* Ministry_of_Culture_Public_ArtTests.swift */; };
+		A749926D1DB0AF1B00F54E73 /* Ministry_of_Culture_Public_ArtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749926C1DB0AF1B00F54E73 /* Ministry_of_Culture_Public_ArtUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A749925E1DB0AF1B00F54E73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A749923F1DB0AF1A00F54E73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A74992461DB0AF1A00F54E73;
+			remoteInfo = "Ministry of Culture Public Art";
+		};
+		A74992691DB0AF1B00F54E73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A749923F1DB0AF1A00F54E73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A74992461DB0AF1A00F54E73;
+			remoteInfo = "Ministry of Culture Public Art";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A74992471DB0AF1A00F54E73 /* Ministry of Culture Public Art.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ministry of Culture Public Art.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A749924A1DB0AF1A00F54E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A749924C1DB0AF1A00F54E73 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		A749924E1DB0AF1A00F54E73 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A74992511DB0AF1A00F54E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A74992531DB0AF1A00F54E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A74992561DB0AF1A00F54E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A74992581DB0AF1B00F54E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A749925D1DB0AF1B00F54E73 /* Ministry of Culture Public ArtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ministry of Culture Public ArtTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A74992611DB0AF1B00F54E73 /* Ministry_of_Culture_Public_ArtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ministry_of_Culture_Public_ArtTests.swift; sourceTree = "<group>"; };
+		A74992631DB0AF1B00F54E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A74992681DB0AF1B00F54E73 /* Ministry of Culture Public ArtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ministry of Culture Public ArtUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A749926C1DB0AF1B00F54E73 /* Ministry_of_Culture_Public_ArtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ministry_of_Culture_Public_ArtUITests.swift; sourceTree = "<group>"; };
+		A749926E1DB0AF1B00F54E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A74992441DB0AF1A00F54E73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A749925A1DB0AF1B00F54E73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A74992651DB0AF1B00F54E73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A749923E1DB0AF1A00F54E73 = {
+			isa = PBXGroup;
+			children = (
+				A74992491DB0AF1A00F54E73 /* Ministry of Culture Public Art */,
+				A74992601DB0AF1B00F54E73 /* Ministry of Culture Public ArtTests */,
+				A749926B1DB0AF1B00F54E73 /* Ministry of Culture Public ArtUITests */,
+				A74992481DB0AF1A00F54E73 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A74992481DB0AF1A00F54E73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A74992471DB0AF1A00F54E73 /* Ministry of Culture Public Art.app */,
+				A749925D1DB0AF1B00F54E73 /* Ministry of Culture Public ArtTests.xctest */,
+				A74992681DB0AF1B00F54E73 /* Ministry of Culture Public ArtUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A74992491DB0AF1A00F54E73 /* Ministry of Culture Public Art */ = {
+			isa = PBXGroup;
+			children = (
+				A749924A1DB0AF1A00F54E73 /* AppDelegate.swift */,
+				A749924C1DB0AF1A00F54E73 /* MasterViewController.swift */,
+				A749924E1DB0AF1A00F54E73 /* DetailViewController.swift */,
+				A74992501DB0AF1A00F54E73 /* Main.storyboard */,
+				A74992531DB0AF1A00F54E73 /* Assets.xcassets */,
+				A74992551DB0AF1A00F54E73 /* LaunchScreen.storyboard */,
+				A74992581DB0AF1B00F54E73 /* Info.plist */,
+			);
+			path = "Ministry of Culture Public Art";
+			sourceTree = "<group>";
+		};
+		A74992601DB0AF1B00F54E73 /* Ministry of Culture Public ArtTests */ = {
+			isa = PBXGroup;
+			children = (
+				A74992611DB0AF1B00F54E73 /* Ministry_of_Culture_Public_ArtTests.swift */,
+				A74992631DB0AF1B00F54E73 /* Info.plist */,
+			);
+			path = "Ministry of Culture Public ArtTests";
+			sourceTree = "<group>";
+		};
+		A749926B1DB0AF1B00F54E73 /* Ministry of Culture Public ArtUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A749926C1DB0AF1B00F54E73 /* Ministry_of_Culture_Public_ArtUITests.swift */,
+				A749926E1DB0AF1B00F54E73 /* Info.plist */,
+			);
+			path = "Ministry of Culture Public ArtUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A74992461DB0AF1A00F54E73 /* Ministry of Culture Public Art */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A74992711DB0AF1B00F54E73 /* Build configuration list for PBXNativeTarget "Ministry of Culture Public Art" */;
+			buildPhases = (
+				A74992431DB0AF1A00F54E73 /* Sources */,
+				A74992441DB0AF1A00F54E73 /* Frameworks */,
+				A74992451DB0AF1A00F54E73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ministry of Culture Public Art";
+			productName = "Ministry of Culture Public Art";
+			productReference = A74992471DB0AF1A00F54E73 /* Ministry of Culture Public Art.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A749925C1DB0AF1B00F54E73 /* Ministry of Culture Public ArtTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A74992741DB0AF1B00F54E73 /* Build configuration list for PBXNativeTarget "Ministry of Culture Public ArtTests" */;
+			buildPhases = (
+				A74992591DB0AF1B00F54E73 /* Sources */,
+				A749925A1DB0AF1B00F54E73 /* Frameworks */,
+				A749925B1DB0AF1B00F54E73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A749925F1DB0AF1B00F54E73 /* PBXTargetDependency */,
+			);
+			name = "Ministry of Culture Public ArtTests";
+			productName = "Ministry of Culture Public ArtTests";
+			productReference = A749925D1DB0AF1B00F54E73 /* Ministry of Culture Public ArtTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A74992671DB0AF1B00F54E73 /* Ministry of Culture Public ArtUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A74992771DB0AF1B00F54E73 /* Build configuration list for PBXNativeTarget "Ministry of Culture Public ArtUITests" */;
+			buildPhases = (
+				A74992641DB0AF1B00F54E73 /* Sources */,
+				A74992651DB0AF1B00F54E73 /* Frameworks */,
+				A74992661DB0AF1B00F54E73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A749926A1DB0AF1B00F54E73 /* PBXTargetDependency */,
+			);
+			name = "Ministry of Culture Public ArtUITests";
+			productName = "Ministry of Culture Public ArtUITests";
+			productReference = A74992681DB0AF1B00F54E73 /* Ministry of Culture Public ArtUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A749923F1DB0AF1A00F54E73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "乾太";
+				TargetAttributes = {
+					A74992461DB0AF1A00F54E73 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = CHBKD3LB2S;
+						ProvisioningStyle = Automatic;
+					};
+					A749925C1DB0AF1B00F54E73 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = CHBKD3LB2S;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A74992461DB0AF1A00F54E73;
+					};
+					A74992671DB0AF1B00F54E73 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = CHBKD3LB2S;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A74992461DB0AF1A00F54E73;
+					};
+				};
+			};
+			buildConfigurationList = A74992421DB0AF1A00F54E73 /* Build configuration list for PBXProject "Ministry of Culture Public Art" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A749923E1DB0AF1A00F54E73;
+			productRefGroup = A74992481DB0AF1A00F54E73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A74992461DB0AF1A00F54E73 /* Ministry of Culture Public Art */,
+				A749925C1DB0AF1B00F54E73 /* Ministry of Culture Public ArtTests */,
+				A74992671DB0AF1B00F54E73 /* Ministry of Culture Public ArtUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A74992451DB0AF1A00F54E73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A74992571DB0AF1B00F54E73 /* LaunchScreen.storyboard in Resources */,
+				A74992541DB0AF1A00F54E73 /* Assets.xcassets in Resources */,
+				A74992521DB0AF1A00F54E73 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A749925B1DB0AF1B00F54E73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A74992661DB0AF1B00F54E73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A74992431DB0AF1A00F54E73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A749924F1DB0AF1A00F54E73 /* DetailViewController.swift in Sources */,
+				A749924D1DB0AF1A00F54E73 /* MasterViewController.swift in Sources */,
+				A749924B1DB0AF1A00F54E73 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A74992591DB0AF1B00F54E73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A74992621DB0AF1B00F54E73 /* Ministry_of_Culture_Public_ArtTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A74992641DB0AF1B00F54E73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A749926D1DB0AF1B00F54E73 /* Ministry_of_Culture_Public_ArtUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A749925F1DB0AF1B00F54E73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A74992461DB0AF1A00F54E73 /* Ministry of Culture Public Art */;
+			targetProxy = A749925E1DB0AF1B00F54E73 /* PBXContainerItemProxy */;
+		};
+		A749926A1DB0AF1B00F54E73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A74992461DB0AF1A00F54E73 /* Ministry of Culture Public Art */;
+			targetProxy = A74992691DB0AF1B00F54E73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A74992501DB0AF1A00F54E73 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A74992511DB0AF1A00F54E73 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A74992551DB0AF1A00F54E73 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A74992561DB0AF1A00F54E73 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A749926F1DB0AF1B00F54E73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A74992701DB0AF1B00F54E73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A74992721DB0AF1B00F54E73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CHBKD3LB2S;
+				INFOPLIST_FILE = "Ministry of Culture Public Art/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "YuHan.Ministry-of-Culture-Public-Art";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A74992731DB0AF1B00F54E73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CHBKD3LB2S;
+				INFOPLIST_FILE = "Ministry of Culture Public Art/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "YuHan.Ministry-of-Culture-Public-Art";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A74992751DB0AF1B00F54E73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CHBKD3LB2S;
+				INFOPLIST_FILE = "Ministry of Culture Public ArtTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "YuHan.Ministry-of-Culture-Public-ArtTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ministry of Culture Public Art.app/Ministry of Culture Public Art";
+			};
+			name = Debug;
+		};
+		A74992761DB0AF1B00F54E73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CHBKD3LB2S;
+				INFOPLIST_FILE = "Ministry of Culture Public ArtTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "YuHan.Ministry-of-Culture-Public-ArtTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ministry of Culture Public Art.app/Ministry of Culture Public Art";
+			};
+			name = Release;
+		};
+		A74992781DB0AF1B00F54E73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = CHBKD3LB2S;
+				INFOPLIST_FILE = "Ministry of Culture Public ArtUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "YuHan.Ministry-of-Culture-Public-ArtUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Ministry of Culture Public Art";
+			};
+			name = Debug;
+		};
+		A74992791DB0AF1B00F54E73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = CHBKD3LB2S;
+				INFOPLIST_FILE = "Ministry of Culture Public ArtUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "YuHan.Ministry-of-Culture-Public-ArtUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Ministry of Culture Public Art";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A74992421DB0AF1A00F54E73 /* Build configuration list for PBXProject "Ministry of Culture Public Art" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A749926F1DB0AF1B00F54E73 /* Debug */,
+				A74992701DB0AF1B00F54E73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A74992711DB0AF1B00F54E73 /* Build configuration list for PBXNativeTarget "Ministry of Culture Public Art" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A74992721DB0AF1B00F54E73 /* Debug */,
+				A74992731DB0AF1B00F54E73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A74992741DB0AF1B00F54E73 /* Build configuration list for PBXNativeTarget "Ministry of Culture Public ArtTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A74992751DB0AF1B00F54E73 /* Debug */,
+				A74992761DB0AF1B00F54E73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A74992771DB0AF1B00F54E73 /* Build configuration list for PBXNativeTarget "Ministry of Culture Public ArtUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A74992781DB0AF1B00F54E73 /* Debug */,
+				A74992791DB0AF1B00F54E73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A749923F1DB0AF1A00F54E73 /* Project object */;
+}
