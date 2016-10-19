@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ministry of Culture Public Art/DetailViewController.swift"
+            timestampString = "498549930.668741"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "DetailViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ministry_of_Culture_Public_Art.DetailViewController.__deallocating_deinit"
+                  moduleName = "Ministry of Culture Public Art"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kantai/Desktop/Ministry%20of%20Culture%20Public%20Art/Ministry%20of%20Culture%20Public%20Art/DetailViewController.swift"
+                  timestampString = "498549393.351036"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ministry_of_Culture_Public_Art.DetailViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Ministry_of_Culture_Public_Art.DetailViewController"
+                  moduleName = "Ministry of Culture Public Art"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kantai/Desktop/Ministry%20of%20Culture%20Public%20Art/Ministry%20of%20Culture%20Public%20Art/DetailViewController.swift"
+                  timestampString = "498549393.354795"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ministry_of_Culture_Public_Art.DetailViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Ministry_of_Culture_Public_Art.DetailViewController"
+                  moduleName = "Ministry of Culture Public Art"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kantai/Desktop/Ministry%20of%20Culture%20Public%20Art/Ministry%20of%20Culture%20Public%20Art/DetailViewController.swift"
+                  timestampString = "498549393.357887"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ministry_of_Culture_Public_Art.DetailViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Ministry_of_Culture_Public_Art.DetailViewController&gt;"
+                  moduleName = "Ministry of Culture Public Art"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kantai/Desktop/Ministry%20of%20Culture%20Public%20Art/Ministry%20of%20Culture%20Public%20Art/DetailViewController.swift"
+                  timestampString = "498549393.3631"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ministry_of_Culture_Public_Art.DetailViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Ministry_of_Culture_Public_Art.DetailViewController&gt;"
+                  moduleName = "Ministry of Culture Public Art"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kantai/Desktop/Ministry%20of%20Culture%20Public%20Art/Ministry%20of%20Culture%20Public%20Art/DetailViewController.swift"
+                  timestampString = "498549393.367182"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ministry of Culture Public Art/MasterViewController.swift"
+            timestampString = "498555751.936788"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "parseJsonData(data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ministry of Culture Public Art/MasterViewController.swift"
+            timestampString = "498557891.860965"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

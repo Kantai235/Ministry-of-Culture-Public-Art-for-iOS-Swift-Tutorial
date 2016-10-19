@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A70804E11DB748FB0082B5C9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70804E01DB748FB0082B5C9 /* Post.swift */; };
+		A70804E31DB7501B0082B5C9 /* SwiftLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70804E21DB7501B0082B5C9 /* SwiftLoading.swift */; };
+		A70804E51DB760580082B5C9 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70804E41DB760580082B5C9 /* Cell.swift */; };
 		A749924B1DB0AF1A00F54E73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749924A1DB0AF1A00F54E73 /* AppDelegate.swift */; };
 		A749924D1DB0AF1A00F54E73 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749924C1DB0AF1A00F54E73 /* MasterViewController.swift */; };
 		A749924F1DB0AF1A00F54E73 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749924E1DB0AF1A00F54E73 /* DetailViewController.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A70804E01DB748FB0082B5C9 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A70804E21DB7501B0082B5C9 /* SwiftLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftLoading.swift; path = ../SwiftLoading.swift; sourceTree = "<group>"; };
+		A70804E41DB760580082B5C9 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		A74992471DB0AF1A00F54E73 /* Ministry of Culture Public Art.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ministry of Culture Public Art.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A749924A1DB0AF1A00F54E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A749924C1DB0AF1A00F54E73 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 		A74992491DB0AF1A00F54E73 /* Ministry of Culture Public Art */ = {
 			isa = PBXGroup;
 			children = (
+				A70804E21DB7501B0082B5C9 /* SwiftLoading.swift */,
 				A749924A1DB0AF1A00F54E73 /* AppDelegate.swift */,
 				A749924C1DB0AF1A00F54E73 /* MasterViewController.swift */,
 				A749924E1DB0AF1A00F54E73 /* DetailViewController.swift */,
@@ -106,6 +113,8 @@
 				A74992531DB0AF1A00F54E73 /* Assets.xcassets */,
 				A74992551DB0AF1A00F54E73 /* LaunchScreen.storyboard */,
 				A74992581DB0AF1B00F54E73 /* Info.plist */,
+				A70804E01DB748FB0082B5C9 /* Post.swift */,
+				A70804E41DB760580082B5C9 /* Cell.swift */,
 			);
 			path = "Ministry of Culture Public Art";
 			sourceTree = "<group>";
@@ -267,7 +276,10 @@
 			files = (
 				A749924F1DB0AF1A00F54E73 /* DetailViewController.swift in Sources */,
 				A749924D1DB0AF1A00F54E73 /* MasterViewController.swift in Sources */,
+				A70804E31DB7501B0082B5C9 /* SwiftLoading.swift in Sources */,
 				A749924B1DB0AF1A00F54E73 /* AppDelegate.swift in Sources */,
+				A70804E11DB748FB0082B5C9 /* Post.swift in Sources */,
+				A70804E51DB760580082B5C9 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +530,7 @@
 				A74992731DB0AF1B00F54E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A74992741DB0AF1B00F54E73 /* Build configuration list for PBXNativeTarget "Ministry of Culture Public ArtTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +539,7 @@
 				A74992761DB0AF1B00F54E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A74992771DB0AF1B00F54E73 /* Build configuration list for PBXNativeTarget "Ministry of Culture Public ArtUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +548,7 @@
 				A74992791DB0AF1B00F54E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
