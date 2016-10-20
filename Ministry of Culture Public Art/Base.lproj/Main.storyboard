@@ -32,12 +32,12 @@
                         <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
                                 <color key="backgroundColor" red="0.91249483819999999" green="0.7684013247" blue="0.41631013150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -48,11 +48,15 @@
                                     <action selector="mapClick:" destination="JEX-9P-axG" eventType="touchUpInside" id="F5U-m7-ldA"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="文化部Logo" translatesAutoresizingMaskIntoConstraints="NO" id="WGZ-bb-0G8"/>
                         </subviews>
                         <color key="backgroundColor" red="0.91249483823776245" green="0.76840132474899292" blue="0.41631013154983521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Fxk-jY-G4U" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="0HR-bI-Ipx"/>
+                            <constraint firstItem="WGZ-bb-0G8" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" id="5XR-2i-8jJ"/>
+                            <constraint firstItem="0XM-y9-sOw" firstAttribute="top" secondItem="WGZ-bb-0G8" secondAttribute="bottom" constant="8" id="9PS-4q-XjB"/>
                             <constraint firstItem="Fxk-jY-G4U" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="Dd9-xG-CWe"/>
+                            <constraint firstAttribute="trailing" secondItem="WGZ-bb-0G8" secondAttribute="trailing" constant="20" id="FTO-dC-q1J"/>
                             <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="Fxk-jY-G4U" secondAttribute="bottom" constant="8" id="NDc-vw-Q3v"/>
                             <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="wyd-83-A7r" secondAttribute="bottom" constant="20" id="SuC-mr-Efq"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
@@ -60,12 +64,15 @@
                             <constraint firstItem="Fxk-jY-G4U" firstAttribute="top" secondItem="0XM-y9-sOw" secondAttribute="bottom" constant="8" id="i5d-tn-MOx"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
                             <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
+                            <constraint firstItem="WGZ-bb-0G8" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="20" id="wHv-Q3-Y7P"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
+                        <outlet property="imageView" destination="WGZ-bb-0G8" id="IJM-tl-gYc"/>
+                        <outlet property="label" destination="0XM-y9-sOw" id="tnW-iY-n0V"/>
                         <outlet property="uimap" destination="Fxk-jY-G4U" id="hlG-to-ape"/>
                     </connections>
                 </viewController>
@@ -92,22 +99,17 @@
             <objects>
                 <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="Ministry_of_Culture_Public_Art" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="127" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95536679029464722" green="0.63347005844116211" blue="0.38292229175567627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="127" id="WCw-Qf-5nD" customClass="Cell" customModule="Ministry_of_Culture_Public_Art" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="375" height="127"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="127"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <frame key="frameInset" width="375" height="126"/>
+                                    <frame key="frameInset" width="320" height="126"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="文化部Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Jb8-t8-POg">
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="128" id="R8K-W2-4pu"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作品名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exh-FT-ekb">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -118,22 +120,28 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="文化部Logo" translatesAutoresizingMaskIntoConstraints="NO" id="1qY-aY-7xY"/>
                                     </subviews>
                                     <color key="backgroundColor" red="0.95536679030000005" green="0.63347005840000004" blue="0.38292229179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
+                                        <constraint firstItem="1qY-aY-7xY" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="top" id="5FP-Tp-pZu"/>
                                         <constraint firstItem="hFs-jW-uRp" firstAttribute="bottom" secondItem="37f-cq-3Eg" secondAttribute="bottomMargin" id="5OY-LX-DT9"/>
                                         <constraint firstItem="Exh-FT-ekb" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" id="8PI-85-E1S"/>
+                                        <constraint firstItem="1qY-aY-7xY" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leading" id="AvX-Ur-2ZL"/>
                                         <constraint firstItem="hFs-jW-uRp" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leadingMargin" id="Cqv-pA-8jY"/>
-                                        <constraint firstAttribute="trailing" secondItem="Jb8-t8-POg" secondAttribute="trailing" id="IAE-4H-wJu"/>
                                         <constraint firstItem="Exh-FT-ekb" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leadingMargin" id="Lab-Te-ab4"/>
-                                        <constraint firstItem="Jb8-t8-POg" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leading" id="TZq-kP-ydd"/>
-                                        <constraint firstItem="Jb8-t8-POg" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="top" id="bT1-te-GYI"/>
+                                        <constraint firstItem="1qY-aY-7xY" firstAttribute="centerX" secondItem="37f-cq-3Eg" secondAttribute="centerX" id="fLO-Oj-WoB"/>
+                                        <constraint firstAttribute="trailing" secondItem="1qY-aY-7xY" secondAttribute="trailing" id="iSQ-2w-yaL"/>
+                                        <constraint firstAttribute="bottom" secondItem="1qY-aY-7xY" secondAttribute="bottom" id="klv-cc-BVH"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="hFs-jW-uRp" secondAttribute="trailing" id="wX9-9T-Cph"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Exh-FT-ekb" secondAttribute="trailing" id="zKX-BH-hm9"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.95536679030000005" green="0.63347005840000004" blue="0.38292229179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
+                                    <outlet property="imagwv" destination="1qY-aY-7xY" id="g39-fL-YQT"/>
+                                    <outlet property="subtitle_address" destination="hFs-jW-uRp" id="Xi0-7l-d1V"/>
+                                    <outlet property="title_name" destination="Exh-FT-ekb" id="e47-2e-pOI"/>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
                                 </connections>
                             </tableViewCell>

@@ -12,18 +12,37 @@ import CoreLocation
 
 class DetailViewController: UIViewController, CLLocationManagerDelegate {
 
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    // 1.創建 locationManager
+    var locationManager = CLLocationManager()
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     @IBOutlet weak var uimap: MKMapView!
     
-    var location : CLLocationManager!; //座標管理元件
+    var annTitle: String = ""
+    var annSubtitle: String = ""
+    var annLatitude: Double = 120.0
+    var annLongitude: Double = 120.0
+    var annImageView: String = ""
+    var annLabelText: String = ""
+    
+    // var location : CLLocationManager!; //座標管理元件
     
     func configureView() {
-        // Update the user interface for the detail item.
-//        if let detail = self.detailItem {
-//            if let label = self.detailDescriptionLabel {
-//                label.text = detail.description
-//            }
-//        }
+        locationManager.requestWhenInUseAuthorization()
+        // 1. 還沒有詢問過用戶以獲得權限
+        if CLLocationManager.authorizationStatus() == .notDetermined {
+            locationManager.requestAlwaysAuthorization()
+        }
+        // 2. 用戶不同意
+        else if CLLocationManager.authorizationStatus() == .denied {
+//            showAlert("Location services were previously denied. Please enable location services for this app in Settings.")
+        }
+        // 3. 用戶已經同意
+        else if CLLocationManager.authorizationStatus() == .authorizedAlways {
+            locationManager.startUpdatingLocation()
+        }
     }
 
     override func viewDidLoad() {
@@ -32,16 +51,16 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         self.configureView()
         
         // 建立一個 CLLocationManager
-        location = CLLocationManager();
+        self.locationManager = CLLocationManager();
         
         // 設置委任對象
-        location.delegate = self;
+        self.locationManager.delegate = self;
         
         // 距離篩選器 用來設置移動多遠距離才觸發委任方法更新位置
-        location.distanceFilter = kCLLocationAccuracyNearestTenMeters
+        self.locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters
         
         // 取得自身定位位置的精確度
-        location.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         
         /* kCLLocationAccuracyBestForNavigation：精確度最高，適用於導航的定位。
          * kCLLocationAccuracyBest：精確度高。
@@ -51,24 +70,46 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
          * kCLLocationAccuracyThreeKilometers：精確度 3 公里以內。
          */
         
-        // 建立一個地點圖示 (圖示預設為紅色大頭針)
-//        let objectAnnotation = MKPointAnnotation()
-//        objectAnnotation.coordinate = CLLocation(latitude: 25.036798, longitude: 121.499962).coordinate
-//        objectAnnotation.title = "艋舺公園"
-//        objectAnnotation.subtitle = "艋舺公園位於龍山寺旁邊，原名為「萬華十二號公園」。"
-//        uimap.addAnnotation(objectAnnotation)
-    }
+//        // 地圖預設顯示的範圍大小 (數字越小越精確)
+//        let latDelta = 0.1
+//        let longDelta = 0.1
+//        let currentLocationSpan:MKCoordinateSpan =
+//            MKCoordinateSpanMake(latDelta, longDelta)
+//        
+//        // 設置地圖顯示的範圍與中心點座標
+//        let center:CLLocation = CLLocation(
+//            latitude: self.annLatitude, longitude: self.annLongitude)
+//        let currentRegion:MKCoordinateRegion =
+//            MKCoordinateRegion(
+//                center: center.coordinate,
+//                span: currentLocationSpan
+//        )
+//        self.uimap.setRegion(currentRegion, animated: true)
 
+        // 建立一個地點圖示 (圖示預設為紅色大頭針)
+        let objectAnnotation = MKPointAnnotation()
+        objectAnnotation.coordinate = CLLocation(latitude: self.annLatitude, longitude: self.annLongitude).coordinate
+        objectAnnotation.title = self.annTitle
+        objectAnnotation.subtitle = self.annSubtitle
+        uimap.addAnnotation(objectAnnotation)
+        
+        // 寫上文字、顯示圖片
+        self.label.text = self.annLabelText
+        if (self.annImageView != "") {
+            self.loadImageFromUrl(url: (self.annImageView), view: self.imageView)
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         // 首次使用 向使用者詢問定位自身位置權限
         if CLLocationManager.authorizationStatus() == .notDetermined {
             // 取得定位服務授權
-            location.requestWhenInUseAuthorization()
+            self.locationManager.requestWhenInUseAuthorization()
             
             // 開始定位自身位置
-            location.startUpdatingLocation()
+            self.locationManager.startUpdatingLocation()
         }
             // 使用者已經拒絕定位自身位置權限
         else if CLLocationManager.authorizationStatus() == .denied {
@@ -96,7 +137,7 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         // 使用者已經同意定位自身位置權限
         } else if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             // 開始定位自身位置
-            location.startUpdatingLocation()
+            self.locationManager.startUpdatingLocation()
         }
     }
     
@@ -106,8 +147,8 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        //因為ＧＰＳ功能很耗電,所以被敬執行時關閉定位功能
-        location.stopUpdatingLocation();
+        //因為ＧＰＳ功能很耗電,所以背景執行時關閉定位功能
+        self.locationManager.stopUpdatingLocation();
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -130,10 +171,14 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         let fullSize = UIScreen.main.bounds.size
         
         // 建立一個 MKMapView
-        self.uimap = MKMapView(frame: CGRect(
-            x: 0, y: 20,
-            width: fullSize.width,
-            height: fullSize.height - 20))
+        self.uimap = MKMapView(
+            frame: CGRect(
+                x: 0,
+                y: 20,
+                width: fullSize.width,
+                height: fullSize.height - 20
+            )
+        )
         
         // 地圖樣式
         self.uimap.mapType = .standard
@@ -145,22 +190,48 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate {
         self.uimap.isZoomEnabled = true
         
         // 地圖預設顯示的範圍大小 (數字越小越精確)
-        let latDelta = 0.05
-        let longDelta = 0.05
+        let latDelta = 0.01
+        let longDelta = 0.01
         let currentLocationSpan:MKCoordinateSpan =
             MKCoordinateSpanMake(latDelta, longDelta)
         
         // 設置地圖顯示的範圍與中心點座標
         let center:CLLocation = CLLocation(
-            latitude: 25.05, longitude: 121.515)
+            latitude: self.annLatitude, longitude: self.annLongitude)
         let currentRegion:MKCoordinateRegion =
             MKCoordinateRegion(
                 center: center.coordinate,
-                span: currentLocationSpan)
+                span: currentLocationSpan
+            )
         self.uimap.setRegion(currentRegion, animated: true)
+        
+        // 建立一個地點圖示 (圖示預設為紅色大頭針)
+        let objectAnnotation = MKPointAnnotation()
+        objectAnnotation.coordinate = CLLocation(latitude: self.annLatitude, longitude: self.annLongitude).coordinate
+        objectAnnotation.title = self.annTitle
+        objectAnnotation.subtitle = self.annSubtitle
+        uimap.addAnnotation(objectAnnotation)
         
         // 加入到畫面中
         self.view.addSubview(self.uimap)
+    }
+    
+    func loadImageFromUrl(url: String, view: UIImageView){
+        // Create Url from string
+        let url = NSURL(string: url)!
+        // Download task:
+        // - sharedSession = global NSURLCache, NSHTTPCookieStorage and NSURLCredentialStorage objects.
+        let task = URLSession.shared.dataTask(with: url as URL) { (responseData, responseUrl, error) -> Void in
+            // if responseData is not null...
+            if let data = responseData{
+                // execute in UI thread
+                DispatchQueue.main.async(execute: { () -> Void in
+                    view.image = UIImage(data: data)
+                })
+            }
+        }
+        // Run task
+        task.resume()
     }
 
 }

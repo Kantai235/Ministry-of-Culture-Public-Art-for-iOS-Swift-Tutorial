@@ -19,7 +19,7 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem
+        // self.navigationItem.leftBarButtonItem = self.editButtonItem
         
         SwiftLoading.shared.showOverlay(view: self.navigationController?.view)
         
@@ -31,6 +31,8 @@ class MasterViewController: UITableViewController {
             with: request as URLRequest,
             completionHandler: {
                 (data, responsem, error) -> Void in
+                SwiftLoading.shared.hideOverlayView()
+                
                 let httpResponse = responsem as? HTTPURLResponse
                 if error != nil {
                     NSLog("[WARN] 遇到了錯誤，在 urlSession 當中")
@@ -45,12 +47,11 @@ class MasterViewController: UITableViewController {
                         NSLog("[DEBUG] urlSession data is 404.")
                     }
                 }
-                SwiftLoading.shared.hideOverlayView()
             }
         )
         task.resume()
         
-        let addButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(insertNewObject(_:)))
+        let addButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: nil)
         self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
             let controllers = split.viewControllers
@@ -59,7 +60,6 @@ class MasterViewController: UITableViewController {
     }
     
     func parseJsonData(data: NSData) -> Void {
-        
         var _jsonResult: NSArray! = nil
         do {
             _jsonResult = try JSONSerialization.jsonObject(
@@ -94,8 +94,6 @@ class MasterViewController: UITableViewController {
             post.hitRate = (_post as AnyObject).value(forKey: "hitRate") as? Int
             _jsonPost.append(post)
         }
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -108,12 +106,6 @@ class MasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func insertNewObject(_ sender: Any) {
-        objects.insert(NSDate(), at: 0)
-        let indexPath = IndexPath(row: 0, section: 0)
-        self.tableView.insertRows(at: [indexPath], with: .automatic)
-    }
-    
     // MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
@@ -121,6 +113,15 @@ class MasterViewController: UITableViewController {
 //                let object = objects[indexPath.row] as! NSDate
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
 //                controller.detailItem = object
+                controller.annTitle = (self._jsonPost[indexPath.row]?.name)!
+                controller.annSubtitle = (self._jsonPost[indexPath.row]?.intro)!
+                controller.annLatitude = Double((self._jsonPost[indexPath.row]?.latitude)!)!
+                controller.annLongitude = Double((self._jsonPost[indexPath.row]?.longitude)!)!
+                controller.annImageView = (self._jsonPost[indexPath.row]?.representImage)!
+                controller.annLabelText = ""
+                controller.annLabelText += "名稱：" + (self._jsonPost[indexPath.row]?.name)! + "\n"
+                controller.annLabelText += "名稱：" + (self._jsonPost[indexPath.row]?.author)! + "\n"
+                controller.annLabelText += "名稱：" + (self._jsonPost[indexPath.row]?.buildingYearName)! + "\n"
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -139,20 +140,46 @@ class MasterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! Cell
+        let post = self._jsonPost[indexPath.row]
+        cell.title_name.text = post?.name
+        cell.subtitle_address.text = post?.address
+        if (post!.representImage != "") {
+            loadImageFromUrl(url: (post?.representImage)!, view: cell.imagwv!)
+            cell.imagwv?.contentMode = .scaleAspectFill
+            cell.imagwv?.alpha = 0.7
+        }
 //        let object = objects[indexPath.row] as! NSDate
 //        cell.textLabel!.text = object.description
         return cell
     }
     
+    func loadImageFromUrl(url: String, view: UIImageView){
+        // Create Url from string
+        let url = NSURL(string: url)!
+        // Download task:
+        // - sharedSession = global NSURLCache, NSHTTPCookieStorage and NSURLCredentialStorage objects.
+        let task = URLSession.shared.dataTask(with: url as URL) { (responseData, responseUrl, error) -> Void in
+            // if responseData is not null...
+            if let data = responseData{
+                // execute in UI thread
+                DispatchQueue.main.async(execute: { () -> Void in
+                    view.image = UIImage(data: data)
+                })
+            }
+        }
+        // Run task
+        task.resume()
+    }
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
-        return true
+        return false
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            objects.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+//            objects.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
