@@ -5,8 +5,20 @@
 ###### (1) 程式碼沒重構過，所以是智障寫法，極度不建議當作學習指標。
 ###### (2) 因此建議看 README.md 就好，會把該 App 的一些重要語法給列出。
 
+### 開始畫面的 Storyboard 設計
 # ![LaunchScreen Storyboard](images/launch.png "LaunchScreen Storyboard")
+
+### 應用程式畫面的 Storyboard 設計
 # ![Main Storyboard](images/main.png "Main Storyboard")
+
+### 首頁執行畫面
+# ![開始畫面](images/mainView.png "開始畫面")
+
+### 選擇藝術品
+# ![選擇藝術品](images/selectArt.png "選擇藝術品")
+
+### 詳細地點顯示
+# ![詳細地點顯示](images/aboutMap.png "詳細地點顯示")
 
 ### 如果你要上網下載 Json 資料，你要記得在 info.plist 加入：
 > App Transport Security Settings -> Allow Arbitrary Loads -> YES
