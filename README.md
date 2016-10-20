@@ -233,3 +233,30 @@ self.locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters
 self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
 ```
 
+### 如何把經緯度轉地址
+```Swift
+func geoCoderToCLGeo(latitude: Double, longitude: Double, label :UILabel) -> Void {
+    let geoCoder = CLGeocoder()
+    let currentLocation = CLLocation(latitude: latitude, longitude: longitude)
+    geoCoder.reverseGeocodeLocation(currentLocation, completionHandler: {
+        (placemarks, error) -> Void in
+        if error != nil{
+            // print(error)
+            return
+        }
+        //name         街道地址
+        //country      國家
+        //province     省
+        //locality     市
+        //sublocality  縣.區
+        //route        街道、路
+        //streetNumber 門牌號碼
+        //postalCode   郵遞區號
+        if placemarks != nil && (placemarks?.count)! > 0{
+            let placemark = (placemarks?[0])! as CLPlacemark
+            //這邊拼湊轉回來的地址
+            label.text = label.text! + placemark.name!
+        }
+    })
+}
+```
